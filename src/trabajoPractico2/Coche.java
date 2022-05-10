@@ -5,7 +5,7 @@ public class Coche {
 	//Atributos
 	private final int CERO_KM = 0;
 	private final int ANIO_ACTUAL = 2022;
-	static private int  cantidadCoches = 0;
+	private static int cantidadDeCoches = 0;
 	private String marca;
 	private String modelo;
 	private int kilometrosActuales;
@@ -17,6 +17,8 @@ public class Coche {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.precio = precio;
+		this.anioDeFabricacion = this.ANIO_ACTUAL;
+		cantidadDeCoches++;
 	}
 	public Coche(String marca, String modelo,int kilometros, int anio, double precio){
 		this.marca = marca;
@@ -24,11 +26,12 @@ public class Coche {
 		kilometrosActuales = kilometros;
 		anioDeFabricacion = anio;
 		this.precio = precio;
+		cantidadDeCoches++;
 	}
 	
 	//Metodos
-	static public int getCantidadDeCoches(){
-		return cantidadCoches;
+	public static int getCantidadCoches() {
+		return cantidadDeCoches;
 	}
 	public void setKilometrosActuales(int kilometros){
 		kilometrosActuales = kilometros;
