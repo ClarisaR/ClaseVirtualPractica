@@ -1,4 +1,4 @@
-package trabajoPractico2;
+package claseVirtual;
 
 public class Alumno {
 	//atributos

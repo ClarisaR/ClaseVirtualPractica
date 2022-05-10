@@ -1,4 +1,6 @@
-package trabajoPractico2;
+package claseVirtual;
+
+import claseVirtual.Alumno;
 
 public class PruebaAlumno {
 
