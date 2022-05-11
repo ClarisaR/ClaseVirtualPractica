@@ -18,6 +18,7 @@ public class Persona {
 		this.peso = peso;
 		this.altura = altura;
 	}
+
 	
 	//Metodos
 	public void alimentar(double kilos){
