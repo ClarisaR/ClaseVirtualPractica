@@ -16,6 +16,8 @@ public class Persona {
 		this.genero = genero;
 		this.dni = dni;
 		this.peso = peso;
+		this.edad = 0;
+		this.viva = true;
 		this.altura = altura;
 	}
 
