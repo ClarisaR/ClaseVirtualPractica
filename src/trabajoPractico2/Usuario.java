@@ -1,7 +1,7 @@
 package trabajoPractico2;
 
 public class Usuario {
-	private String usuario;
+	private String nombreDeUsuario;
 	private String contrasenia;
 	private String nombre;
 	private String apellido;
@@ -9,8 +9,8 @@ public class Usuario {
 	private int edad;
 
 
-	public Usuario(String usuario, String contrasenia, String nombre, String apellido, int dni, int edad){
-		this.usuario = usuario;
+	public Usuario(String nombreDeUsuario, String contrasenia, String nombre, String apellido, int dni, int edad){
+		this.nombreDeUsuario = nombreDeUsuario;
 		this.contrasenia = contrasenia;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -20,7 +20,7 @@ public class Usuario {
 	
 	
 	public String getUsuario() {
-		return usuario;
+		return nombreDeUsuario;
 	}
 
 	public String getContrasenia() {

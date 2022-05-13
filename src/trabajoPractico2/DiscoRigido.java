@@ -1,26 +1,27 @@
 package trabajoPractico2;
 //Ejercicio 9
+
+import java.lang.Math;
 public class DiscoRigido {
-	private int tamaño;
-	final long deTBaGB = 1024;
+	private double tamanio;
+	private final int deTBaGB;
 	
 	
-	public DiscoRigido(int tamaño){
-		this.tamaño = tamaño;
+	public DiscoRigido(double tamanio){
+		this.tamanio = tamanio;
+		this.deTBaGB = 1024;
 	}
 	
-	public long calcularCantidadDVD(){
-		double tamanioDVDenGB = 4.5;
-		long cantidadGB = this.tamaño * this.deTBaGB;
-		double cantidadDVDs = cantidadGB / tamanioDVDenGB;
-		return (long)Math.ceil(cantidadDVDs);
+	public int calcularCantidadDVD(double capacidadDVDenGB){
+		double cantidadGB = this.tamanio * this.deTBaGB;
+		double cantidadDVDs = cantidadGB / capacidadDVDenGB;
+		return (int)Math.ceil(cantidadDVDs);
 	}
 	
-	public long calcularCantidadBlueRays(){
-		int tamañoBlueRayEnGB = 15;
-		long cantidadGB = this.tamaño * this.deTBaGB;
-		double cantidadBlueRays = cantidadGB / tamañoBlueRayEnGB;
-		return (long)Math.ceil(cantidadBlueRays);
+	public int calcularCantidadBlueRays(double capacidadBlueRayenGB){
+		double cantidadGB = this.tamanio * this.deTBaGB;
+		double cantidadBlueRays = cantidadGB /capacidadBlueRayenGB ;
+		return (int)Math.ceil(cantidadBlueRays);
 	}
 		
 }
