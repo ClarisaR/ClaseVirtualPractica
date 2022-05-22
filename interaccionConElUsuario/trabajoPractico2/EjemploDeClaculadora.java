@@ -7,8 +7,10 @@ public class EjemploDeClaculadora {
 		Calculadora casio = new Calculadora(5, 6);
 		System.out.println("Suma: "+casio.sumar());
 		
-		Calculadora casio1 = new Calculadora(4.0);
-		System.out.println("Area circulo: "+casio1.calcularAreaDeUnCirculo());
+		casio = new Calculadora(4.0);
+		System.out.println("Area circulo: "+casio.calcularAreaDeUnCirculo());
+		
+		
 	}
 
 }

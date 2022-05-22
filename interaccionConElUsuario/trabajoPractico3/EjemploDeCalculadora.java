@@ -8,8 +8,8 @@ public class EjemploDeCalculadora {
 	public static void main(String[] args) {
 		
 		Calculadora casio = new Calculadora();
-		Calculadora casio1 = new Calculadora(8, 0);
-		Scanner teclado = new Scanner(System.in);
+		casio= new Calculadora(8, 0);
+		/*Scanner teclado = new Scanner(System.in);
 		int numeroIngresado;
 		System.out.println("Ingrese un numero");
 		numeroIngresado = teclado.nextInt();
@@ -20,6 +20,9 @@ public class EjemploDeCalculadora {
 			System.out.println("El numero ingreado NO es positivo");
 		}
 		
+		*/
+		//System.out.println(casio.dividir());
+		System.out.println(casio);
 		
 	}
 

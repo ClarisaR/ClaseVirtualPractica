@@ -7,6 +7,7 @@ public class Usuario {
 	private String apellido;
 	private int dni;
 	private int edad;
+	private boolean claveBloqueada;
 
 
 	public Usuario(String nombreDeUsuario, String contrasenia, String nombre, String apellido, int dni, int edad){
@@ -16,6 +17,7 @@ public class Usuario {
 		this.apellido = apellido;
 		this.dni = dni;
 		this.edad = edad;
+		this.claveBloqueada = false;
 	}
 	
 	

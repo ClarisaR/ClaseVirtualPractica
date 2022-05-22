@@ -8,6 +8,8 @@ public class Calculadora {
 	private double radio;
 
 	public Calculadora() {
+		this.operador1=0.0;
+		this.operador2=0.0;
 	}
 	public Calculadora(double radio) {
 		this.radio = radio;
@@ -35,9 +37,20 @@ public class Calculadora {
 	public static double multiplicar(double operador1, double operador2) {
 		return operador1*operador2; 
 	}
-	public double dividir() {
-		return this.operador1/this.operador2; 
+	/*public double dividir() {
+		if (operador2==0) {
+			
+		}else {
+			return this.operador1/this.operador2; 
+		}
+		
 	}
+	*/
+	
+	public double dividir() {
+			return this.operador1/this.operador2; 
+	}
+	
 	public static double dividir(double operador1, double operador2) {
 		return operador1/operador2; 
 	}
