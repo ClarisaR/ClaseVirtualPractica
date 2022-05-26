@@ -19,7 +19,15 @@ public class Persona {
 		this.viva = true;
 		this.altura = altura;
 	}
-
+	public Persona(double peso){
+		this.nombre = nombre;
+		this.genero = genero;
+		this.dni = dni;
+		this.peso = peso;
+		this.edad = 0;
+		this.viva = true;
+		this.altura = altura;
+	}
 	
 	public void alimentar(double kilos){
 		this.peso= this.peso + kilos;
@@ -40,10 +48,10 @@ public class Persona {
 		return this.altura;
 	}
 	
-	public double devolverAltura(){
+	public double getAltura(){
 		return this.altura;
 	}
-	public double devolverPeso(){
+	public double getPeso(){
 		return this.peso;
 	}
 	public void setEdad(int edad){
