@@ -37,18 +37,13 @@ public class Calculadora {
 	public static double multiplicar(double operador1, double operador2) {
 		return operador1*operador2; 
 	}
-	/*public double dividir() {
-		if (operador2==0) {
-			
+	
+	public double dividir() {
+		if (this.operador2==0) {
+			return 0;
 		}else {
 			return this.operador1/this.operador2; 
 		}
-		
-	}
-	*/
-	
-	public double dividir() {
-			return this.operador1/this.operador2; 
 	}
 	
 	public static double dividir(double operador1, double operador2) {

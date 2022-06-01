@@ -17,7 +17,7 @@ public class PruebaTemperatura {
 		System.out.println("Ingresar temperatura en Farenheit");
 		valorTemperatura = teclado.nextDouble();
 		
-		temperatura.setValor(valorTemperatura, temperatura.FARENHEIT);
+		temperatura.setValor(valorTemperatura, Temperatura.FARENHEIT);
 		
 		System.out.println("Valor temperatura: "+temperatura.getValor()+" grados Celsius");
 		
@@ -25,13 +25,13 @@ public class PruebaTemperatura {
 		System.out.println("Ingresar temperatura en Kelvin");
 		valorTemperatura = teclado.nextDouble();
 		
-		temperatura.setValor(valorTemperatura, temperatura.KELVIN);
+		temperatura.setValor(valorTemperatura, Temperatura.KELVIN);
 		
 		System.out.println("Valor temperatura: "+temperatura.getValor()+" grados Celsius");
 		
 		System.out.println("Valor temperatura: "+temperatura.getValor()+" grados Celsius");
 		
-		System.out.println(temperatura.convertir(temperatura.FARENHEIT));
+		System.out.println(temperatura.convertir(Temperatura.FARENHEIT));
 		teclado.close();
 	}
 

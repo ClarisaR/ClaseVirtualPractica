@@ -1,38 +1,44 @@
 package trabajoPractico4;
 
 public class Dia {
-	int numeroDeDia;
-
-	public Dia(int numeroDeDia) {
-		this.numeroDeDia = numeroDeDia;
-	} 
 	
-	public String getDia() {
-		switch (this.numeroDeDia) {
+	public static String elNombreEs(int numeroDeDia) {
+		
+		String nombreDelDia = "";
+		
+		switch (numeroDeDia) {
 		case 1: {
-			return "Domingo";
+			nombreDelDia = "Domingo";
+			break;
 		}
 		case 2: {
-			return "Lunes";
+			nombreDelDia ="Lunes";
+			break;
 		}
 		case 3: {
-			return "Martes";
+			nombreDelDia = "Martes";
+			break;
 		}
 		case 4: {
-			return "Miercoles";
+			nombreDelDia = "Miercoles";
+			break;
 		}
 		case 5: {
-			return "Jueves";
+			nombreDelDia = "Jueves";
+			break;
 		}
 		case 6: {
-			return "Viernes";
+			nombreDelDia = "Viernes";
+			break;
 		}
 		case 7: {
-			return "Sabado";
+			nombreDelDia = "Sabado";
+			break;
 		}
 		default:
-			return "Numero de dia inexistente";
+			nombreDelDia = "Numero de dia inexistente";
 		}
+		return nombreDelDia;
 	}
 	
 }
