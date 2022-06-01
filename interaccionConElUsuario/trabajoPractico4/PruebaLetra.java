@@ -8,7 +8,6 @@ public class PruebaLetra {
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Ingresar una letra");
 		char letra = teclado.next().charAt(0);
-		
 		Letra primerasLetras = new Letra(letra);
 		
 		if (primerasLetras.esVocal()) {

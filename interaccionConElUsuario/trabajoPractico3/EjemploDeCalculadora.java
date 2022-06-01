@@ -9,7 +9,7 @@ public class EjemploDeCalculadora {
 		
 		Calculadora casio = new Calculadora();
 		casio= new Calculadora(8, 0);
-		/*Scanner teclado = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
 		int numeroIngresado;
 		System.out.println("Ingrese un numero");
 		numeroIngresado = teclado.nextInt();
@@ -20,10 +20,9 @@ public class EjemploDeCalculadora {
 			System.out.println("El numero ingreado NO es positivo");
 		}
 		
-		*/
-		//System.out.println(casio.dividir());
-		System.out.println(casio);
+		System.out.println("Division: "+casio.dividir());
 		
+		teclado.close();
 	}
 
 }
