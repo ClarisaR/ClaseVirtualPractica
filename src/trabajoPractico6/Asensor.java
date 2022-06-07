@@ -1,4 +1,6 @@
-package trabajoPractico3;
+package trabajoPractico6;
+
+import trabajoPractico3.Persona;
 
 public class Asensor {
 	private final int PISO_MAXIMO;
@@ -71,6 +73,13 @@ public class Asensor {
 	}
 	public int getPisoActual() {
 		return this.pisoActual;
+	}
+	public boolean irAlPiso(int pisoDeseado) {
+		while (pisoDeseado<=this.PISO_MAXIMO && pisoDeseado>=this.PISO_MINIMO){
+			this.pisoActual = pisoDeseado;
+			return true;
+		}
+		return false;
 	}
 	
 }
