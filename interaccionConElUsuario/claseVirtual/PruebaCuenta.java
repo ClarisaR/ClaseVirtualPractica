@@ -1,19 +1,20 @@
 package claseVirtual;
 
-import claseVirtual.OperacionEnCuenta;
 import java.util.Scanner;
 
 public class PruebaCuenta {
 
-
 	public static void main(String[] args) {
 		Cuenta cuentaUno = new Cuenta();
 		Cuenta cuentaDos = new Cuenta();
-		Cuenta cuentaSeleccionada;
+		Cuenta cuentaSeleccionada = null;
 
 		Scanner teclado = new Scanner(System.in);
 
 		int opcionCuenta;
+		System.out.println("*******************************");
+		System.out.println("BIENVENIDO AL CAJERO AUTOMATICO");
+		System.out.println("*******************************");
 
 		do {
 			System.out.println("A que cuenta desea ingresar?");
@@ -28,42 +29,60 @@ public class PruebaCuenta {
 				cuentaSeleccionada = cuentaDos;
 				break;
 			}
-				
+			default: {
+				System.out.println("No existe este numero de cuenta");
+			}
+
 			}
 		} while (opcionCuenta != 1 && opcionCuenta != 2);
 
-		OperacionEnCuenta operacionEnCuenta; 
-		char opcion = teclado.next().charAt(0);
+		char opcion;
+
+		do {
+			menuCuenta();
+			opcion = teclado.next().toLowerCase().charAt(0);
+			operacion(cuentaSeleccionada, teclado, opcion);
+		} while (opcion != 'd');
+	}
+
+	// Metodo operacion
+	private static void operacion(Cuenta cuentaSeleccionada, Scanner teclado,
+			char opcion) {
 		switch (opcion) {
 			case 'a': {
-				operacionEnCuenta = OperacionEnCuenta.DEPOSITAR_EN_CUENTA;
+				System.out.println("Deposito: ");
+				double deposito = teclado.nextDouble();
+				cuentaSeleccionada.depositar(deposito);
 				break;
 			}
 			case 'b': {
-				operacionEnCuenta = OperacionEnCuenta.EXTRAER_SALDO_DE_LA_CUENTA;
+				System.out.println("Extraer: ");
+				double extraccion = teclado.nextDouble();
+				if (cuentaSeleccionada.getSaldo() >= extraccion) {
+					cuentaSeleccionada.extraer(extraccion);
+					System.out.println("Extraiste: $" + extraccion);
+				} else {
+					System.out.println("No se pudo extraer.");
+				}
 				break;
 			}
 			case 'c': {
-				operacionEnCuenta = OperacionEnCuenta.VER_SALDO_DE_LA_CUENTA;
+				System.out.println("Saldo: $" + cuentaSeleccionada.getSaldo());
 				break;
 			}
 			case 'd': {
-				operacionEnCuenta = OperacionEnCuenta.SALIR;
-				break;
-			}
-			default: {
-				System.out.println("Opcion invalida");
+				System.out.println("OPERACION FINALIZADA");
+				System.out.println("*******************************");
 			}
 		}
-		
-		
-			System.out.println("Que operacion desea realizar?");
-			System.out.println("a-Depositar en cuenta");
-			System.out.println("b-Extraer saldo de la cuenta");
-			System.out.println("c-Ver saldo de la cuenta");
-			System.out.println("d-Salir");
-
 	}
 
-
+	// Metodo menuCuenta
+	private static void menuCuenta() {
+		System.out.println("Que operacion desea realizar?");
+		System.out.println("a-Depositar en cuenta");
+		System.out.println("b-Extraer saldo de la cuenta");
+		System.out.println("c-Ver saldo de la cuenta");
+		System.out.println("d-Salir");
+	}
 }

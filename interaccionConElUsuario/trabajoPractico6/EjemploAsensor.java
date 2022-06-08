@@ -40,7 +40,6 @@ public class EjemploAsensor {
 		System.out.println("7-Ir al piso");
 		System.out.println("8-Finalizar");
 		
-		MenuAsensor opcionDeseada;
 		
 	}
 	}
