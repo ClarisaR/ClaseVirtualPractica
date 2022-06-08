@@ -24,9 +24,24 @@ public class EjemploAsensor {
 			pisoDeseado = teclado.nextInt();
 		}
 		
+		
 		System.out.println("Estas en el piso: "+asensorEdificio.getPisoActual());
 		
-
+		char opcion = '\0';
+		
+		while(opcion!=8) {
+		System.out.println("Ingresar la opcion que desea");
+		System.out.println("1-Abrir puerta");
+		System.out.println("2-Cerrar puerta");
+		System.out.println("3-Ingresar");
+		System.out.println("4-Subir");
+		System.out.println("5-Bajar");
+		System.out.println("6-Salir");
+		System.out.println("7-Ir al piso");
+		System.out.println("8-Finalizar");
+		
+		MenuAsensor opcionDeseada;
+		
 	}
-
+	}
 }

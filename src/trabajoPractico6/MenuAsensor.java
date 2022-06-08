@@ -1,0 +1,5 @@
+package trabajoPractico6;
+
+public enum MenuAsensor {
+	ABRIR_PUERTA,CERRAR_PUERTA,INGRESAR,SUBIR,BAJAR,SALIR,IR_AL_PISO,FINALIZAR
+}

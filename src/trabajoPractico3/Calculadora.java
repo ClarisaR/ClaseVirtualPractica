@@ -40,7 +40,7 @@ public class Calculadora {
 	
 	public double dividir() {
 		if (this.operador2==0) {
-			return 0;
+			return 0.0;
 		}else {
 			return this.operador1/this.operador2; 
 		}
