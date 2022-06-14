@@ -13,6 +13,13 @@ public class Asensor {
 	private double pesoActual;
 	private int capacidadActual;
 	
+	public static final char ABRIR_PUERTA = 'a';
+	public static final char CERRAR_PUERTA = 'b';
+	public static final char SUBIR = 'c';
+	public static final char BAJAR  = 'd';
+	public static final char IR_AL_PISO = 'e';
+	public static final char PISO_ACTUAL = 'f';
+	
 	public Asensor(int capacidadMaxima, double pesoMaximo) {
 		this.PISO_MAXIMO = 20;
 		this.PISO_MINIMO = 0;

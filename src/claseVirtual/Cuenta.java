@@ -2,6 +2,10 @@ package claseVirtual;
 
 public class Cuenta {
 	private double saldo;
+	public static final char DEPOSITAR = 'a';
+	public static final char EXTRAER = 'b';
+	public static final char VER_SALDO = 'c';
+	public static final char SALIR = 'd';
 
 	public double getSaldo() {
 		return saldo;

@@ -4,13 +4,16 @@ public class Tornillo {
 	private final char TIPO_DE_CABEZA;
 	private final int LONGITUD;
 	private final int CANTIDAD_DE_ROSCA;
-	private int posicionActual;
+	private char posicionActual;
+	public static final char PLANA = 'P';
+	public static final char PHILLIPS= 'H';
+	public static final char ALLEN = 'A';
 	
 	public Tornillo(char tipoDeCabeza, int longitud, int cantidadDeRoscas){
 		this.TIPO_DE_CABEZA = tipoDeCabeza;
 		this.LONGITUD = longitud;
 		this.CANTIDAD_DE_ROSCA = cantidadDeRoscas;
-		this.posicionActual = 0;
+		this.posicionActual = 'H';
 	}
 	
 	public int getLongitud(){
@@ -22,7 +25,7 @@ public class Tornillo {
 	}
 	
 	public boolean girar(char sentido){
-		while (sentido==0||sentido==1){
+		while (sentido=='H'||sentido=='A'){
 			this.posicionActual = sentido;
 			return true;
 		}
