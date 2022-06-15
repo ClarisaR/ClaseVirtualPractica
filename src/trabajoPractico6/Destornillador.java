@@ -8,15 +8,23 @@ public class Destornillador {
 		this.tipoDeCabeza = tipoDeCabeza;
 	}
 	
-	public boolean desatornillar(Tornillo tornilloActual) {
+	public void desatornillar(Tornillo tornilloActual) {
 		boolean sePuedeSeguir = true;
 		
 		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza) {
 			while(sePuedeSeguir) {
-				sePuedeSeguir = tornilloActual.girar(Sentido.ANTIHORARIO);
+				sePuedeSeguir = tornilloActual.girar(SentidoDeGiro.ANTIHORARIO);
 			}
 		}
-		return false;
+	}
+	public void desatornillar(Tornillo tornilloActual, Tarugo tarugoActual) {
+		boolean sePuedeSeguir = true;
+		
+		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza && tornilloActual.getLongitud()==tarugoActual.getLongitud()) {
+			while(sePuedeSeguir) {
+				sePuedeSeguir = tornilloActual.girar(SentidoDeGiro.ANTIHORARIO);
+			}
+		}
 	}
 	
 	public void atornillar(Tornillo tornilloActual) {
@@ -24,7 +32,18 @@ public class Destornillador {
 		
 		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza) {
 			while(sePuedeSeguir) {
-				sePuedeSeguir = tornilloActual.girar(Sentido.HORARIO);
+				sePuedeSeguir = tornilloActual.girar(SentidoDeGiro.HORARIO);
+			}
+		}
+	}
+	
+
+	public void atornillar(Tornillo tornilloActual, Tarugo tarugoActual) {
+		boolean sePuedeSeguir = true;
+		
+		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza && tornilloActual.getLongitud()==tarugoActual.getLongitud()) {
+			while(sePuedeSeguir) {
+				sePuedeSeguir = tornilloActual.girar(SentidoDeGiro.HORARIO);
 			}
 		}
 	}

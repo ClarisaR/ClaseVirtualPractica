@@ -1,6 +1,6 @@
 package trabajoPractico6;
 
-public enum Sentido {
+public enum SentidoDeGiro {
 	HORARIO,
 	ANTIHORARIO
 }

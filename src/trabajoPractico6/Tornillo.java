@@ -1,7 +1,4 @@
 package trabajoPractico6;
-
-import javax.imageio.plugins.tiff.TIFFDirectory;
-
 public class Tornillo {
 	private final TipoDeCabeza TIPO_DE_CABEZA;
 	private final int LONGITUD;
@@ -23,10 +20,10 @@ public class Tornillo {
 		return this.TIPO_DE_CABEZA;
 	}
 	
-	public boolean girar(Sentido sentido){
-		boolean sePudoGirar = true;
+	public boolean girar(SentidoDeGiro sentidoDeGiro){
+		boolean sePudoGirar = false;
 		
-		switch (sentido) {
+		switch (sentidoDeGiro) {
 		case HORARIO: {
 			if(posicionActual<CANTIDAD_DE_ROSCA) {
 				posicionActual++;
@@ -34,10 +31,22 @@ public class Tornillo {
 			}else {
 				sePudoGirar = false;
 			}
-			break;
 		}
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + sentido);
+		
+		case ANTIHORARIO: {
+			if(this.posicionActual>0) {
+				posicionActual--;
+				sePudoGirar = true;
+			}else {
+				sePudoGirar = false;
+			}
 		}
+		default: {
+			sePudoGirar = false;
+		}
+		
+		return sePudoGirar;
+		
 	}
-}
+	}
+	}
