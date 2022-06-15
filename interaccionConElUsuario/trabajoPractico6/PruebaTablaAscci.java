@@ -5,53 +5,29 @@ public class PruebaTablaAscci {
 	public static void main(String[] args) {
 		
 		System.out.println("CARACTERES NUMERICOS: ");
-		char caracteresNumericos=48;
-		while(caracteresNumericos>=48 && caracteresNumericos<=57){
-			System.out.print(" "+caracteresNumericos+" ");
-			caracteresNumericos++;
-		}
+		mostrarCaracteres(48, 57);
 		System.out.println(" ");
 		
 		System.out.println("LETRAS MINUSCULAS: ");
-		char letrasMinusculas=97;
-		while(letrasMinusculas>=97 && letrasMinusculas<=122){
-			System.out.print(" "+letrasMinusculas+" ");
-			letrasMinusculas++;
-		}
+		mostrarCaracteres(97, 122);
 		System.out.println(" ");
 		
 		System.out.println("LETRAS MAYUSCULAS: ");
-		char letrasMayusculas=65;
-		while(letrasMayusculas>=65 && letrasMayusculas<=90){
-			System.out.print(" "+letrasMayusculas+" ");
-			letrasMayusculas++;
-		}
+		mostrarCaracteres(65, 90);
 		System.out.println(" ");
 		
 		System.out.println("CARACTERES ESPECIALES: ");
-		char caracteresEspeciales=0;
-		while((caracteresEspeciales>=0 && caracteresEspeciales<=47)){
-			System.out.print(" "+caracteresEspeciales+" ");
-			caracteresEspeciales++;
-		}
-		
-		caracteresEspeciales = 58;
-		while((caracteresEspeciales>=58 && caracteresEspeciales<=64)){
-			System.out.print(" "+caracteresEspeciales+" ");
-			caracteresEspeciales++;
-		}
-		
-		caracteresEspeciales = 91;
-		while((caracteresEspeciales>=91 && caracteresEspeciales<=96)){
-			System.out.print(" "+caracteresEspeciales+" ");
-			caracteresEspeciales++;
-		}
-		
-		caracteresEspeciales = 123;
-		while((caracteresEspeciales>=123 && caracteresEspeciales<=255)){
-			System.out.print(" "+caracteresEspeciales+" ");
-			caracteresEspeciales++;
-		}
+		mostrarCaracteres(0, 47);
+		mostrarCaracteres(58, 64);
+		mostrarCaracteres(91, 96);
+		mostrarCaracteres(123, 255);
 	}
 
+	public static void mostrarCaracteres(int inicio, int fin) {
+		int caracterActual = inicio;
+		while(caracterActual>=inicio && caracterActual<=fin) {
+			System.out.print(" "+(char)caracterActual+" ");
+			caracterActual++;
+		}
+	}
 }

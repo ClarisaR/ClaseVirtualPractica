@@ -1,34 +1,31 @@
 package trabajoPractico6;
 
 public class Destornillador {
-	private final char TIPO_DE_CABEZA;
+	private TipoDeCabeza tipoDeCabeza;
 	
-	public static final char PLANA = 'P';
-	public static final char PHILLIPS= 'H';
-	public static final char ALLEN = 'A';
 	
-	public Destornillador(char tipoDeCabeza){
-		this.TIPO_DE_CABEZA = tipoDeCabeza;
+	public Destornillador(TipoDeCabeza tipoDeCabeza){
+		this.tipoDeCabeza = tipoDeCabeza;
 	}
 	
-	public boolean desatornillar(Tornillo tornillo) {
-		if (tornillo.getTipoDeCabeza()==this.TIPO_DE_CABEZA) {
-			return true;
+	public boolean desatornillar(Tornillo tornilloActual) {
+		boolean sePuedeSeguir = true;
+		
+		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza) {
+			while(sePuedeSeguir) {
+				sePuedeSeguir = tornilloActual.girar(Sentido.ANTIHORARIO);
+			}
 		}
 		return false;
 	}
 	
-	public boolean atornillar(Tornillo tornillo) {
-		if (tornillo.getTipoDeCabeza()==this.TIPO_DE_CABEZA) {
-			return true;
+	public void atornillar(Tornillo tornilloActual) {
+		boolean sePuedeSeguir = true;
+		
+		if (tornilloActual.getTipoDeCabeza()==this.tipoDeCabeza) {
+			while(sePuedeSeguir) {
+				sePuedeSeguir = tornilloActual.girar(Sentido.HORARIO);
+			}
 		}
-		return false;
-	}
-	
-	public boolean atornillar(Tornillo tornillo, Tarugo tarugo) {
-		if(tornillo.getLongitud()==tarugo.getLongitud() && tornillo.getTipoDeCabeza()==this.TIPO_DE_CABEZA) {
-			return true;
-		}
-		return false;
 	}
 }

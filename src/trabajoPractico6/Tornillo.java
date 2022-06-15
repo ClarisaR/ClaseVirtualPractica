@@ -1,34 +1,43 @@
 package trabajoPractico6;
 
+import javax.imageio.plugins.tiff.TIFFDirectory;
+
 public class Tornillo {
-	private final char TIPO_DE_CABEZA;
+	private final TipoDeCabeza TIPO_DE_CABEZA;
 	private final int LONGITUD;
 	private final int CANTIDAD_DE_ROSCA;
-	private char posicionActual;
-	public static final char PLANA = 'P';
-	public static final char PHILLIPS= 'H';
-	public static final char ALLEN = 'A';
+	private int posicionActual;
 	
-	public Tornillo(char tipoDeCabeza, int longitud, int cantidadDeRoscas){
+	public Tornillo(TipoDeCabeza tipoDeCabeza, int longitud, int cantidadDeRoscas){
 		this.TIPO_DE_CABEZA = tipoDeCabeza;
 		this.LONGITUD = longitud;
 		this.CANTIDAD_DE_ROSCA = cantidadDeRoscas;
-		this.posicionActual = 'H';
+		this.posicionActual = 0;
 	}
 	
 	public int getLongitud(){
 		return this.LONGITUD;
 	}
 	
-	public char getTipoDeCabeza(){
+	public TipoDeCabeza getTipoDeCabeza(){
 		return this.TIPO_DE_CABEZA;
 	}
 	
-	public boolean girar(char sentido){
-		while (sentido=='H'||sentido=='A'){
-			this.posicionActual = sentido;
-			return true;
+	public boolean girar(Sentido sentido){
+		boolean sePudoGirar = true;
+		
+		switch (sentido) {
+		case HORARIO: {
+			if(posicionActual<CANTIDAD_DE_ROSCA) {
+				posicionActual++;
+				sePudoGirar = true;
+			}else {
+				sePudoGirar = false;
+			}
+			break;
 		}
-		return false;
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + sentido);
+		}
 	}
 }
