@@ -8,6 +8,6 @@ public class Tarugo {
 	}
 	
 	public int getLongitud(){
-		return this.getLongitud();
+		return this.LONGITUD;
 	}
 }
